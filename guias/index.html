@@ -1,1 +1,22 @@
+mkdir -p recomendacoes guias comparativos ofertas lp-charcutaria
+
+for d in recomendacoes guias comparativos ofertas lp-charcutaria; do
+  cat > "$d/index.html" << 'EOF'
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Em construção</title>
+</head>
+<body>
+  <h1>Em construção</h1>
+</body>
+</html>
+EOF
+done
+
+git add .
+git commit -m "Cria estrutura inicial do site"
+git push
 
