@@ -81,6 +81,43 @@
       border-radius: 20px;
       margin-bottom: 14px;
     }
+    /* Força empilhamento e centraliza tudo (resolve o layout lado a lado) */
+.cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* Centraliza o texto do micro-cta */
+.micro-cta {
+  text-align: center;
+}
+
+/* Badge sempre centralizado */
+.badge {
+  display: inline-block;
+  margin: 0 auto;
+  background: #1e1e1e;
+  color: #cfcfcf;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+/* Botão responsivo e centralizado */
+.cta {
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+}
+
+/* Linha de segurança centralizada */
+.secure {
+  text-align: center;
+}
+
   </style>
 </head>
 <body>
@@ -112,21 +149,23 @@
       desenvolveu um método focado em <strong>resolver questões como caem na prova</strong>.
     </p>
 
-    <div class="micro-cta">
+    <div class="cta-wrap">
+  <div class="micro-cta">
     Aula gratuita (3–10 min) + método focado em questões
-    </div>
-    
-    <div class="badge">
-      ✅ Serve para qualquer concurso
-    </div>
+  </div>
 
-    <a class="cta" href="video.html">
-      Quero entender o método em uma aula gratuita
-    </a>
-    <br>
-    <div class="secure">
-      ✔️ Acesso online &nbsp;•&nbsp; ✔️ Sem compromisso
-    </div>
+  <div class="badge">
+    ✅ Serve para qualquer concurso
+  </div>
+
+  <a class="cta" href="video.html">
+    Quero entender o método em uma aula gratuita
+  </a>
+
+  <div class="secure">
+    ✔️ Acesso online &nbsp;•&nbsp; ✔️ Sem compromisso
+  </div>
+</div>
 
   </div>
 
