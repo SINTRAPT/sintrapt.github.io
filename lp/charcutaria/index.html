@@ -22,6 +22,22 @@
   </script>
   <!-- End GTM -->
 
+  <script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17868743421/FHaoCKSlmfMbEP3FvchC',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
   <style>
   <style>
     body {
@@ -94,6 +110,7 @@
      <!-- CTA (TROQUE SOMENTE O LINK, SE PRECISAR) -->
     <a
       href="https://go.hotmart.com/O104257184G?redirectUrl=https%3A%2F%2Fescoladecharcutaria.com.br%2F"
+      onclick="return gtag_report_conversion('https://go.hotmart.com/O104257184G?redirectUrl=https%3A%2F%2Fescoladecharcutaria.com.br%2F');"
       class="cta"
       target="_blank"
       rel="noopener noreferrer"
@@ -112,9 +129,10 @@
   </iframe>
 </div>
 
-    <!-- CTA (TROQUE SOMENTE O LINK, SE PRECISAR) -->
+     <!-- CTA (TROQUE SOMENTE O LINK, SE PRECISAR) -->
     <a
       href="https://go.hotmart.com/O104257184G?redirectUrl=https%3A%2F%2Fescoladecharcutaria.com.br%2F"
+      onclick="return gtag_report_conversion('https://go.hotmart.com/O104257184G?redirectUrl=https%3A%2F%2Fescoladecharcutaria.com.br%2F');"
       class="cta"
       target="_blank"
       rel="noopener noreferrer"
