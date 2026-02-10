@@ -63,6 +63,10 @@ p {
   margin: 24px 0;
 }
 
+.disclaimer{
+   margin-top:26px;
+   font-size:11px;
+   color:#777}
 /* =========================
    BLOCO DE CTA
 ========================= */
