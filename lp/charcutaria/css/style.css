@@ -1,50 +1,108 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f6f7f8;
+  background: #f4f5f6;
   margin: 0;
   padding: 40px 16px;
   color: #111;
 }
+
 .card {
-  max-width: 720px;
+  max-width: 760px;
   margin: auto;
-  background: #fff;
-  padding: 40px 24px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  background: #ffffff;
+  padding: 48px 32px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.3;
+  margin-bottom: 20px;
   text-align: center;
 }
-h1 {
- font-size: 32px;
- margin-bottom: 16px;
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  margin-top: 30px;
 }
+
 p {
- font-size: 18px;
- color: #555;
- margin-bottom: 24px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
 }
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #444;
+}
+
 img {
- max-width: 100%;
- border-radius: 12px;
- margin-bottom: 24px;
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 25px auto;
+  border-radius: 12px;
 }
+
 .cta {
- display: inline-block;
- background: #1e88e5;
- color: #fff;
- padding: 16px 28px;
- border-radius: 10px;
- font-size: 18px;
- text-decoration: none;
- font-weight: bold;
+  display: inline-block;
+  background: #1e88e5;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.2s ease;
 }
+
+.cta:hover {
+  background: #1565c0;
+}
+
 .checks {
- margin-top: 20px;
- color: #666;
- font-size: 15px;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
 }
-.disclaimer{
-margin-top:26px;
-font-size:11px;
-color:#777
+
+.disclaimer {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* BLOCO DE PROVA REAL */
+.prova-real {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #1e88e5;
+  margin-top: 25px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .card {
+    padding: 32px 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  img {
+    max-width: 90%;
+  }
 }
