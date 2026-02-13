@@ -92,6 +92,12 @@ img {
   margin-top: 25px;
 }
 
+.subheadline {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 /* RESPONSIVO */
 @media (max-width: 600px) {
   .card {
