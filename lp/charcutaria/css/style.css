@@ -9,6 +9,7 @@ body {
 .card {
   max-width: 760px;
   margin: auto;
+  text-align: center;
   background: #ffffff;
   padding: 48px 32px;
   border-radius: 18px;
@@ -53,9 +54,10 @@ img {
 }
 
 .cta {
-  display: block;
+
+  display: block !important;
   width: fit-content;
-  margin: 35px auto;
+  margin: 35px auto !important;
   text-align: center;
 
   background: #1e88e5;
