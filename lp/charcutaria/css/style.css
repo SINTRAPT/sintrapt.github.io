@@ -68,10 +68,12 @@ img {
 
   box-shadow: 0 6px 18px rgba(30, 136, 229, 0.25);
   transition: 0.2s ease;
+  transform: scale(1);
 }
 
 .cta:hover {
   background: #1565c0;
+  transform: scale(1.03);
 }
 
 .checks {
