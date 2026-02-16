@@ -130,3 +130,34 @@ footer {
     max-width: 250px;
   }
 }
+.professor {
+  padding: 80px 0;
+  background: #081225;
+}
+
+.professor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.professor-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.professor-text p {
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
+
+.professor-highlight {
+  font-weight: 600;
+  color: #facc15;
+}
+
+.professor-image img {
+  width: 100%;
+  border-radius: 12px;
+}
