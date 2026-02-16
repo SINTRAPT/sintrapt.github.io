@@ -2,15 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <title>Formação Eletricista Residencial F.E.R.A</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Torne-se Eletricista Profissional</title>
+  <meta name="description" content="Aprenda elétrica residencial do básico ao avançado e aumente sua renda com serviços elétricos.">
 
-   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
   
-  <!-- GTM HEAD AQUI -->
   <!-- Google Tag Manager -->
   <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -20,49 +17,32 @@
   })(window,document,'script','dataLayer','GTM-58SL48N3');
   </script>
   <!-- End Google Tag Manager -->
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    // Evento de visualização da LP
-    window.dataLayer.push({
-      event: "lp_view",
-      product_slug: "fera"
-    });
-  </script>
+  
 </head>
 <body>
 
-  <!-- GTM BODY AQUI -->
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58SL48N3"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58SL48N3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+<header class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>Formação Eletricista Residencial de Alto Nível</h1>
+      <p>Fature mais de R$ 6.000 por mês com serviços elétricos profissionais.</p>
+      <a href="/go/fera/" class="btn-primary cta-btn" data-cta="hero">Quero Ver a Formação Completa</a>
+    </div>
 
-<section class="hero">
-  <div class="container">
-    <h1>Torne-se Eletricista Profissional e Aumente sua Renda</h1>
-    <p>Aprenda do básico ao avançado e atue com segurança e profissionalismo.</p>
-
-    <a href="/go/fera/" 
-       class="cta"
-       onclick="dataLayer.push({
-         event: 'rca_click',
-         product_slug: 'fera',
-         cta_id: 'hero_cta'
-       });">
-       Quero Ver a Formação Completa
-    </a>
+    <div class="hero-image">
+      <img src="img/emerson.png" alt="Professor Emerson Leite">
+    </div>
   </div>
-</section>
+</header>
 
-<div class="divider"></div>
-
-<section class="section">
+<section class="section dark">
   <div class="container">
     <h2>Mercado em Crescimento</h2>
     <ul>
@@ -74,37 +54,46 @@
   </div>
 </section>
 
-<div class="divider"></div>
-
 <section class="section">
-  <div class="container">
-    <h2>Para Quem é Indicado?</h2>
-    <ul>
-      <li>Quem deseja iniciar na área elétrica</li>
-      <li>Profissionais que querem se especializar</li>
-      <li>Eletricistas que desejam aumentar sua renda</li>
-    </ul>
+  <div class="container two-columns">
+    <div>
+      <h2>Quem é o Professor Emerson Leite?</h2>
+      <p>
+        Eletricista profissional e especialista em elétrica residencial.
+        Criador do método F.E.R.A, já formou centenas de alunos na área elétrica.
+      </p>
+    </div>
+    <div>
+      <img src="img/certificado.png" alt="Certificado do Curso FERA">
+    </div>
   </div>
 </section>
 
-<footer class="footer">
-  Este site não é afiliado ao Facebook ou Google. Resultados podem variar.
+<section class="section dark">
+  <div class="container">
+    <h2>Aprenda na Prática</h2>
+
+    <div class="gallery">
+      <img src="img/trabalhando1.jpg" alt="Professor trabalhando em quadro elétrico">
+      <img src="img/trabalhando2.jpg" alt="Instalação elétrica residencial">
+    </div>
+
+    <div class="center">
+      <a href="/go/fera/" class="btn-primary cta-btn" data-cta="final">Quero Me Tornar Eletricista Profissional</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>
+      Este site não é afiliado ao Facebook ou Google.
+      Resultados podem variar.
+      Página independente que pode conter links de afiliado.
+    </p>
+  </div>
 </footer>
 
-
-
-  <script>
-    document.addEventListener("click", function (e) {
-      const btn = e.target.closest("[data-rca]");
-      if (!btn) return;
-
-      window.dataLayer.push({
-        event: "rca_click",
-        product_slug: "fera",
-        cta_id: btn.getAttribute("data-cta-id")
-      });
-    });
-  </script>
-
+<script src="js/lp.js"></script>
 </body>
 </html>
