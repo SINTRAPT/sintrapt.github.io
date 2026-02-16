@@ -1,21 +1,20 @@
-<script>
-  window.dataLayer = window.dataLayer || [];
+document.addEventListener("DOMContentLoaded", function () {
 
-  // Evento: LP view
-  window.dataLayer.push({
-    event: "lp_view",
-    product_slug: "fera"
-  });
+  const buttons = document.querySelectorAll(".cta-btn");
 
-  // Evento: clique no RCA
-  document.addEventListener("click", function (e) {
-    const btn = e.target.closest("[data-rca]");
-    if (!btn) return;
+  buttons.forEach(function(btn) {
+    btn.addEventListener("click", function() {
 
-    window.dataLayer.push({
-      event: "rca_click",
-      product_slug: "fera",
-      cta_id: btn.getAttribute("data-cta-id") || "cta_main"
+      const ctaId = this.dataset.cta;
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "rca_click",
+        product_slug: "fera",
+        cta_id: ctaId
+      });
+
     });
   });
-</script>
+
+});
