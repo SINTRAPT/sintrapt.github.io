@@ -49,15 +49,20 @@
     <p>Aprenda do básico ao avançado e atue com segurança e profissionalismo.</p>
 
     <a href="/go/fera/" 
-       class="btn-primary"
-       data-product="fera"
-       data-cta="hero_button">
+       class="cta"
+       onclick="dataLayer.push({
+         event: 'rca_click',
+         product_slug: 'fera',
+         cta_id: 'hero_cta'
+       });">
        Quero Ver a Formação Completa
     </a>
   </div>
 </section>
 
-<section class="section light">
+<div class="divider"></div>
+
+<section class="section">
   <div class="container">
     <h2>Mercado em Crescimento</h2>
     <ul>
@@ -68,6 +73,8 @@
     </ul>
   </div>
 </section>
+
+<div class="divider"></div>
 
 <section class="section">
   <div class="container">
@@ -81,10 +88,9 @@
 </section>
 
 <footer class="footer">
-  <div class="container">
-    Este site não é afiliado ao Facebook ou Google. Resultados podem variar.
-  </div>
+  Este site não é afiliado ao Facebook ou Google. Resultados podem variar.
 </footer>
+
 
 
   <script>
