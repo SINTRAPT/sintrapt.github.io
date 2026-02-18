@@ -369,31 +369,22 @@ h1{
   .sticky-cta{
     display:block;
   }
-
-  /* ================= HEADER MOBILE PREMIUM ================= */
-
-.topbar{
-  background: rgba(7,10,18,.95);
-  backdrop-filter: blur(14px);
-}
+/* ================= HEADER MOBILE PREMIUM ================= */
 
 .topbar__inner{
-  padding:12px 0;
+  padding:10px 0;
 }
 
 .brand{
-  font-size:11px;
+  font-size:12px;
   font-weight:600;
-  opacity:.85;
-}
-
-.brand__dot{
-  width:6px;
-  height:6px;
+  opacity:.9;
+  max-width:55%;
+  line-height:1.2;
 }
 
 .topbar__cta{
-  padding:10px 18px;
+  padding:10px 16px;
   font-size:13px;
   font-weight:800;
   border-radius:999px;
@@ -404,13 +395,14 @@ h1{
   border:none;
 
   box-shadow:
-    0 6px 18px rgba(242,201,76,.35),
-    0 0 18px rgba(242,201,76,.25);
+    0 8px 22px rgba(242,201,76,.35),
+    0 0 20px rgba(242,201,76,.25);
 }
 
 .topbar__cta:active{
   transform:scale(.97);
 }
+
 
 
 }
