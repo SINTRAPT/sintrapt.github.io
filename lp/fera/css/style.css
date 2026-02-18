@@ -325,9 +325,15 @@ h1{
     font-size:15px;
   }
 
+  .bullets{
+    text-align:left;
+    gap:10px;
+  }
+  
   .bullets li{
-    font-size:13px;
-    padding:8px 10px;
+    text-align:left;
+    padding:12px 14px;
+    font-size:14px;
   }
 
   .hero__img{
