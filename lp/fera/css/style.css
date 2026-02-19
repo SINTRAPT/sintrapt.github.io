@@ -234,6 +234,16 @@ body {
     background: rgba(255,255,255,0.08);
 }
 
+.card--highlight .center {
+  margin-top: 25px;
+}
+
+.card--highlight .btn {
+  width: 100%;
+  max-width: 320px;
+}
+
+
 .checks {
     margin-top: 20px;
     list-style: none;
@@ -406,6 +416,14 @@ body {
     object-fit: contain;
   }
 
+     .section {
+    padding: 60px 0;
+  }
+
+  .hero {
+    padding-bottom: 40px;
+  }
+
     .learn-grid {
         grid-template-columns: 1fr;
     }
@@ -436,6 +454,15 @@ body {
        content: "Minha vaga";
        font-size: 13px;
      }
+    .grid-2--reverse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-2--reverse .media {
+    order: -1;
+    margin-bottom: 25px;
+  }
 }
 @media (max-width: 900px) and (orientation: landscape) {
 
