@@ -1,267 +1,356 @@
-/*++++ V4 +++++*/
-/* =========================
+/* =========  V5 =================
    RESET
-========================= */
+================================ */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background: linear-gradient(180deg, #07132a 0%, #0b1d3a 100%);
-  color: #ffffff;
-  line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(180deg, #071a35 0%, #0b2447 100%);
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+/* ================================
+   LAYOUT BASE
+================================ */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
-/* =========================
-   HEADER
-========================= */
-.topbar {
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.topbar__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.topbar__cta {
-  background: #f5c84c;
-  color: #000;
-  padding: 12px 22px;
-  border-radius: 40px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.topbar__cta:hover {
-  transform: translateY(-2px);
-}
-
-/* =========================
-   HERO
-========================= */
-.hero {
-  padding: 80px 0;
-}
-
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: 40px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.hero .hl {
-  color: #f5c84c;
-}
-
-.hero .sub {
-  font-size: 18px;
-  opacity: 0.9;
-  margin-bottom: 25px;
-}
-
-.hero ul {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.hero ul li {
-  margin-bottom: 10px;
-}
-
-/* CTA */
-.btn {
-  display: inline-block;
-  background: #f5c84c;
-  color: #000;
-  padding: 16px 32px;
-  border-radius: 50px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-.hero__img {
-  width: 100%;
-  max-width: 520px;
-}
-
-/* =========================
-   SECTIONS
-========================= */
 .section {
-  padding: 80px 0;
+    padding: 80px 0;
 }
 
 .section--soft {
-  background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.03);
 }
 
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.section__head {
+    margin-bottom: 40px;
 }
 
-/* GRID 2 */
+.section__sub {
+    color: #cfd8e3;
+    margin-top: 10px;
+}
+
+/* ================================
+   HEADER
+================================ */
+.topbar {
+    padding: 20px 0;
+    background: transparent;
+}
+
+.topbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand__dot {
+    width: 8px;
+    height: 8px;
+    background: #f5c542;
+    border-radius: 50%;
+}
+
+.topbar__cta {
+    text-decoration: none;
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+    padding: 60px 0 80px;
+}
+
+.hero__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hl {
+    color: #f5c542;
+}
+
+.sub {
+    color: #cfd8e3;
+    margin-bottom: 20px;
+}
+
+.bullets {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.bullets li {
+    margin-bottom: 10px;
+}
+
+.hero__visual {
+    position: relative;
+    text-align: center;
+}
+
+.hero__img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================================
+   BUTTONS (PADRÃO UNIFICADO)
+================================ */
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #f5c542, #e0b02f);
+    color: #000;
+    padding: 16px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn--xl {
+    padding: 18px 40px;
+    font-size: 18px;
+}
+
+/* Centralização padrão CTA */
+.center {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* ================================
+   URGENCY (CONTADOR MELHORADO)
+================================ */
+.urgency {
+    margin-top: 15px;
+    display: inline-block;
+    background: rgba(245,197,66,0.15);
+    border: 1px solid #f5c542;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.microtrust {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cfd8e3;
+}
+
+/* ================================
+   GRID 2 COLUNAS
+================================ */
 .grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-/* =========================
-   VIDEO
-========================= */
-.video-wrap {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
+.grid-2--reverse {
+    align-items: center;
 }
 
-.video-wrap iframe {
-  width: 100%;
-  max-width: 900px;
-  height: 500px;
-  border-radius: 20px;
-}
-
-/* =========================
+/* ================================
    CARDS
-========================= */
+================================ */
 .card {
-  background: rgba(255,255,255,0.05);
-  padding: 30px;
-  border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
 }
 
 .card--highlight {
-  background: rgba(245,200,76,0.1);
+    background: rgba(255,255,255,0.08);
 }
 
-/* =========================
+.checks {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.checks li {
+    margin-bottom: 10px;
+}
+
+/* Mini cards (Instalações etc) */
+.cards {
+    margin: 25px 0;
+}
+
+.mini {
+    background: rgba(255,255,255,0.05);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border-left: 4px solid #f5c542;
+}
+
+/* ================================
+   STACK PROFESSOR
+================================ */
+.stack__item {
+    margin-bottom: 15px;
+}
+
+.media__img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.media__caption {
+    margin-top: 10px;
+    text-align: center;
+    color: #cfd8e3;
+}
+
+/* ================================
+   LEARN GRID (DESTACADO)
+================================ */
+.learn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.learn {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.learn:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* ================================
+   PHOTOS
+================================ */
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.photo img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* ================================
    FAQ
-========================= */
-details {
-  margin-bottom: 15px;
-  background: rgba(255,255,255,0.05);
-  padding: 15px 20px;
-  border-radius: 12px;
-  cursor: pointer;
+================================ */
+.faq details {
+    background: rgba(255,255,255,0.05);
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-summary {
-  font-weight: 600;
-  cursor: pointer;
+.faq summary {
+    cursor: pointer;
+    font-weight: 600;
 }
 
-details p {
-  margin-top: 10px;
-  opacity: 0.9;
+.faq p {
+    margin-top: 10px;
+    color: #cfd8e3;
 }
 
-/* =========================
-   IMAGES SECTION
-========================= */
-.section img {
-  width: 100%;
-  border-radius: 20px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  padding: 40px 0;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.7;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-/* =========================
-   STICKY CTA
-========================= */
+/* ================================
+   STICKY CTA (MOBILE)
+================================ */
 .sticky-cta {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+    display: none;
 }
 
-.btn--sticky {
-  padding: 14px 24px;
-  font-size: 14px;
+/* ================================
+   FOOTER
+================================ */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #cfd8e3;
 }
 
-/* =========================
+/* ================================
    RESPONSIVO
-========================= */
+================================ */
 @media (max-width: 1024px) {
-  .hero h1 {
-    font-size: 38px;
-  }
+    .hero__grid,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
 
-  .video-wrap iframe {
-    height: 420px;
-  }
+    .learn-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
 
-  .hero__grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+    .learn-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .hero__img {
-    margin: 0 auto;
-  }
+    .sticky-cta {
+        display: block;
+        position: fixed;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 999;
+    }
 
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .video-wrap iframe {
-    height: 300px;
-  }
-
-  .sticky-cta {
-    right: 10px;
-    left: 10px;
-    text-align: center;
-  }
+    .btn--sticky {
+        width: 90%;
+        max-width: 400px;
+    }
 }
