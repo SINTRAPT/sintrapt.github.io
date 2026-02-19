@@ -1,4 +1,4 @@
-/* =========  V5 =================
+/* =========  V6 =================
    RESET
 ================================ */
 * {
@@ -28,11 +28,12 @@ body {
 }
 
 .section {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 .section--soft {
-    background: rgba(255,255,255,0.03);
+  padding: 70px 0;
+  background: linear-gradient(180deg, #0b2547 0%, #0f2e55 100%);
 }
 
 .section__head {
@@ -47,17 +48,6 @@ body {
 /* ================================
    HEADER
 ================================ */
-.topbar {
-    padding: 20px 0;
-    background: transparent;
-}
-
-.topbar__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .brand {
     display: flex;
     align-items: center;
@@ -70,16 +60,54 @@ body {
     background: #f5c542;
     border-radius: 50%;
 }
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(180deg, #071a34 0%, #0b2547 100%);
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand__text {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: .5px;
+}
 
 .topbar__cta {
-    text-decoration: none;
+  background: linear-gradient(135deg, #f7c948, #e6b63f);
+  color: #000 !important;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .25s ease;
+  box-shadow: 0 10px 25px rgba(247, 201, 72, 0.35);
+}
+
+.topbar__cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(247, 201, 72, 0.45);
 }
 
 /* ================================
    HERO
 ================================ */
 .hero {
-    padding: 60px 0 80px;
+  padding: 100px 0 80px;
 }
 
 .hero__grid {
@@ -294,6 +322,31 @@ body {
     margin-top: 10px;
     color: #cfd8e3;
 }
+
+/* ================================
+   Video
+================================ */
+.video-card {
+  margin-top: 50px;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,.5);
+}
+
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 
 /* ================================
    STICKY CTA (MOBILE)
