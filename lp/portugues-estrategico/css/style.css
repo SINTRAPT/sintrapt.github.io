@@ -1,4 +1,5 @@
-/* V2 */
+/* V3 */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -13,22 +14,31 @@ body {
   overflow-x: hidden;
 }
 
+/* CONTAINER */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
+/* HEADER */
 .header {
-  background: #161a20;
-  padding: 15px 0;
+  background: rgba(15, 17, 21, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-
 
 .logo {
-  height: 40px;
+  height: 42px;
+  background: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
 }
 
+/* HERO */
 .hero {
   position: relative;
   background: url('../assets/bg-classroom.png') center/cover no-repeat;
@@ -48,31 +58,35 @@ body {
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: 2.6rem;
   margin-bottom: 20px;
 }
 
 .subtitle {
   font-size: 1.1rem;
   margin-bottom: 30px;
+  color: #d0d0d0;
 }
 
+/* BOTÕES */
 .hero-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
   background: #5cbf60;
   color: #000;
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   transition: 0.3s;
+  min-width: 260px;
+  text-align: center;
 }
 
 .btn-primary:hover {
@@ -82,6 +96,10 @@ body {
 .btn-primary.large {
   padding: 18px 40px;
   font-size: 1.1rem;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  display: block;
 }
 
 .btn-link {
@@ -90,6 +108,11 @@ body {
   font-size: 0.95rem;
 }
 
+.btn-link:hover {
+  color: #ffffff;
+}
+
+/* SEÇÕES */
 .section {
   padding: 80px 0;
 }
@@ -103,6 +126,12 @@ body {
   font-size: 1.6rem;
 }
 
+.section p {
+  margin-bottom: 15px;
+  color: #d0d0d0;
+}
+
+/* LISTAS */
 .bullet-list {
   list-style: disc;
   padding-left: 20px;
@@ -114,6 +143,7 @@ body {
   font-weight: bold;
 }
 
+/* CARDS */
 .card-grid {
   display: grid;
   gap: 20px;
@@ -122,25 +152,39 @@ body {
 .card {
   background: #161a20;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
+.card:hover {
+  background: #1c2129;
+}
+
+/* ABOUT */
 .about {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
 .about-image img {
-  max-width: 300px;
+  max-width: 380px;
   width: 100%;
+  border-radius: 12px;
 }
 
+/* CTA FINAL */
 .final-cta {
   text-align: center;
 }
 
+.final-cta .btn-link {
+  display: block;
+  margin-top: 15px;
+}
+
+/* FOOTER */
 .footer {
   background: #0c0e12;
   padding: 40px 0;
@@ -154,18 +198,50 @@ body {
   font-size: 0.8rem;
 }
 
-/* Desktop */
-@media (min-width: 768px) {
+/* RESPONSIVO */
+@media (max-width: 767px) {
 
-  .hero h1 {
-    font-size: 2.6rem;
+  .section {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
   }
 
   .hero-buttons {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
+  .btn-primary {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-image img {
+    max-width: 220px;
+    margin-top: 20px;
+  }
+
+}
+
+/* DESKTOP GRID */
+@media (min-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
