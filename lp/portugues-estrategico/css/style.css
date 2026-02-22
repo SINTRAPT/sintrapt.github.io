@@ -1,248 +1,183 @@
-/* V3 */
-/* RESET */
+/* V4 */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #0f1115;
-  color: #e5e5e5;
-  line-height: 1.6;
-  overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d1117;
+    color: #e6e6e6;
+    line-height: 1.6;
 }
 
-/* CONTAINER */
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* HEADER */
 .header {
-  background: rgba(15, 17, 21, 0.95);
-  backdrop-filter: blur(6px);
-  padding: 18px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    background: #111826;
+    padding: 15px 0;
 }
 
-.logo {
-  height: 42px;
-  background: #ffffff;
-  padding: 6px 12px;
-  border-radius: 6px;
+.logo-box {
+    background: #ffffff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: inline-block;
 }
 
-/* HERO */
+.logo-box img {
+    height: 38px;
+}
+
 .hero {
-  position: relative;
-  background: url('../assets/bg-classroom.png') center/cover no-repeat;
-  padding: 120px 0;
-  text-align: center;
+    position: relative;
+    background: url("../assets/bg-classroom.png") center/cover no-repeat;
+    padding: 120px 0;
+    text-align: center;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+.hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.75));
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #d0d0d0;
+.hero-sub {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cfcfcf;
 }
 
-/* BOTÕES */
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .btn-primary {
-  background: #5cbf60;
-  color: #000;
-  padding: 14px 28px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: 0.3s;
-  min-width: 260px;
-  text-align: center;
+    background: #63c36a;
+    color: #000;
+    padding: 16px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
 }
 
 .btn-primary:hover {
-  background: #4aa94f;
+    transform: scale(1.05);
 }
 
-.btn-primary.large {
-  padding: 18px 40px;
-  font-size: 1.1rem;
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
-  display: block;
+.secondary-link {
+    color: #cfcfcf;
+    text-decoration: none;
 }
 
-.btn-link {
-  color: #b5b5b5;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.btn-link:hover {
-  color: #ffffff;
-}
-
-/* SEÇÕES */
-.section {
-  padding: 80px 0;
-}
-
-.section.alt {
-  background: #161a20;
-}
-
-.section h2 {
-  margin-bottom: 25px;
-  font-size: 1.6rem;
-}
-
-.section p {
-  margin-bottom: 15px;
-  color: #d0d0d0;
-}
-
-/* LISTAS */
-.bullet-list {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-
-.highlight-text {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* CARDS */
-.card-grid {
-  display: grid;
-  gap: 20px;
-}
-
-.card {
-  background: #161a20;
-  padding: 20px;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: #1c2129;
-}
-
-/* ABOUT */
-.about {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-.about-image img {
-  max-width: 380px;
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* CTA FINAL */
+.pain-section,
+.method-section,
+.benefits-section,
+.professor-section,
+.security-section,
 .final-cta {
-  text-align: center;
+    padding: 80px 0;
 }
 
-.final-cta .btn-link {
-  display: block;
-  margin-top: 15px;
+.pain-grid,
+.benefits-grid,
+.security-grid {
+    display: grid;
+    gap: 20px;
 }
 
-/* FOOTER */
-.footer {
-  background: #0c0e12;
-  padding: 40px 0;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #999;
+.pain-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.disclaimer {
-  margin-top: 10px;
-  font-size: 0.8rem;
+.pain-card,
+.benefit-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* RESPONSIVO */
-@media (max-width: 767px) {
+.highlight {
+    margin-top: 30px;
+    font-weight: bold;
+}
 
-  .section {
-    padding: 60px 0;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn-primary {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .about {
-    flex-direction: column;
+.impact-box {
+    margin-top: 40px;
+    background: #1f2937;
+    padding: 30px;
     text-align: center;
-    gap: 30px;
-  }
-
-  .about-image img {
-    max-width: 220px;
-    margin-top: 20px;
-  }
-
+    font-size: 22px;
+    border-radius: 12px;
 }
 
-/* DESKTOP GRID */
-@media (min-width: 768px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.professor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.prof-image img {
+    width: 100%;
+    max-width: 350px;
+}
+
+.security-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    text-align: center;
+}
+
+.final-cta {
+    text-align: center;
+    background: #111826;
+}
+
+.big {
+    font-size: 20px;
+    padding: 18px 36px;
+}
+
+.small-note {
+    margin-top: 10px;
+    color: #aaa;
+}
+
+.footer {
+    padding: 30px 0;
+    background: #0b0f15;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+@media(max-width: 768px){
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .professor-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
