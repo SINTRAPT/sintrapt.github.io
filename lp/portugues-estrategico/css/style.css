@@ -30,7 +30,7 @@ body {
 
 .hero {
   position: relative;
-  background: url('../assets/bg-classroom.jpg') center/cover no-repeat;
+  background: url('../assets/bg-classroom.png') center/cover no-repeat;
   padding: 120px 0;
   text-align: center;
 }
