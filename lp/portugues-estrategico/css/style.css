@@ -1,39 +1,29 @@
-/* v6 */
-/* ============================= */
-/* RESET BASE */
-/* ============================= */
-
+/*  V7 */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+body {
   font-family: 'Inter', sans-serif;
-  background-color: #0b1420;
-  color: #ffffff;
-  scroll-behavior: smooth;
+  background: #0b1420;
+  color: #fff;
   overflow-x: hidden;
 }
 
-/* ============================= */
-/* CONTAINER PADRÃO */
-/* ============================= */
-
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 80px 24px;
 }
 
-/* ============================= */
 /* HEADER */
-/* ============================= */
-
 header {
   background: #0f1b2b;
-  padding: 14px 24px;
+  padding: 16px 24px;
 }
 
 .header-inner {
@@ -41,16 +31,16 @@ header {
   margin: 0 auto;
 }
 
-header img {
-  height: 42px;
+.header-inner img {
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  height: 50px;
 }
 
-/* ============================= */
 /* HERO */
-/* ============================= */
-
 .hero {
-  background: 
+  background:
     linear-gradient(rgba(8,15,25,0.75), rgba(8,15,25,0.75)),
     url("../assets/bg-classroom.png") center/cover no-repeat;
   text-align: center;
@@ -59,21 +49,22 @@ header img {
 
 .hero h1 {
   font-size: 44px;
-  line-height: 1.2;
   margin-bottom: 24px;
-  font-weight: 700;
 }
 
 .hero p {
   font-size: 20px;
   opacity: 0.85;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-/* ============================= */
-/* BOTÕES */
-/* ============================= */
+.hero-badges {
+  margin-top: 25px;
+  font-size: 14px;
+  opacity: 0.75;
+}
 
+/* BOTÕES */
 .cta-primary {
   display: inline-block;
   background: #69c16f;
@@ -81,35 +72,25 @@ header img {
   padding: 16px 32px;
   border-radius: 10px;
   font-weight: 600;
-  font-size: 18px;
   text-decoration: none;
+  margin-top: 25px;
   transition: all 0.3s ease;
-  margin-top: 32px;
 }
 
 .cta-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
 .cta-secondary {
   display: block;
   margin-top: 18px;
-  font-size: 16px;
-  opacity: 0.8;
+  color: #fff;
+  opacity: 0.85;
   text-decoration: none;
-  color: #ffffff;
-  transition: opacity 0.3s ease;
 }
 
-.cta-secondary:hover {
-  opacity: 1;
-}
-
-/* ============================= */
 /* SEÇÕES */
-/* ============================= */
-
 .section-dark {
   background: #0b1420;
 }
@@ -118,10 +99,22 @@ header img {
   background: #0e1a28;
 }
 
-/* ============================= */
-/* CARDS (PROBLEMAS) */
-/* ============================= */
+.section-highlight {
+  margin-top: 40px;
+  font-weight: 600;
+}
 
+.section-subtext {
+  margin-top: 20px;
+  opacity: 0.85;
+}
+
+.section-text {
+  margin-top: 20px;
+  opacity: 0.85;
+}
+
+/* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -133,15 +126,9 @@ header img {
   background: #152233;
   padding: 24px;
   border-radius: 14px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-  font-size: 16px;
-  line-height: 1.5;
 }
 
-/* ============================= */
-/* BLOCO DESTAQUE PADRÃO */
-/* ============================= */
-
+/* HIGHLIGHT */
 .highlight-box {
   background: #1c2a3c;
   padding: 40px;
@@ -149,13 +136,9 @@ header img {
   text-align: center;
   margin-top: 40px;
   font-size: 22px;
-  font-weight: 600;
 }
 
-/* ============================= */
 /* LISTA CURSO */
-/* ============================= */
-
 .course-list {
   margin-top: 40px;
   display: flex;
@@ -167,86 +150,43 @@ header img {
   background: #152233;
   padding: 22px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-/* ============================= */
-/* SEÇÃO PROFESSOR */
-/* ============================= */
-
+/* PROFESSOR */
 .professor-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 60px;
-}
-
-.professor-text {
-  flex: 1;
-}
-
-.professor-text h2 {
-  margin-bottom: 20px;
-}
-
-.professor-text p {
-  margin-bottom: 16px;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-.professor-image {
-  flex: 1;
-  text-align: center;
 }
 
 .professor-image img {
   max-width: 380px;
-  width: 100%;
-  height: auto;
 }
 
-/* ============================= */
 /* INVESTIMENTO */
-/* ============================= */
-
 .investment {
   text-align: center;
 }
 
 .investment-list {
   list-style: none;
-  padding: 0;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  font-size: 18px;
-  opacity: 0.9;
 }
 
-/* ============================= */
 /* CTA FINAL */
-/* ============================= */
-
 .cta-final {
   text-align: center;
 }
 
-.cta-final h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.cta-note {
+  margin-top: 20px;
+  opacity: 0.7;
 }
 
-.cta-final p {
-  margin-bottom: 30px;
-  opacity: 0.85;
-}
-
-/* ============================= */
 /* FOOTER */
-/* ============================= */
-
 footer {
   text-align: center;
   padding: 60px 24px;
@@ -255,25 +195,7 @@ footer {
   background: #0a121d;
 }
 
-/* ============================= */
-/* ANIMAÇÕES */
-/* ============================= */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ============================= */
 /* RESPONSIVO */
-/* ============================= */
-
 @media (max-width: 1024px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
@@ -284,10 +206,6 @@ footer {
 
   .hero h1 {
     font-size: 30px;
-  }
-
-  .hero p {
-    font-size: 18px;
   }
 
   .cards {
@@ -301,11 +219,6 @@ footer {
 
   .professor-image img {
     max-width: 280px;
-    margin-top: 30px;
-  }
-
-  .container {
-    padding: 60px 20px;
   }
 
 }
