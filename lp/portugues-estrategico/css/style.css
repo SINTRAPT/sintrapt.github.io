@@ -1,4 +1,4 @@
-/*  V9 */
+/*  v10 */
 /* RESET */
 * {
   margin: 0;
@@ -113,11 +113,30 @@ header {
   text-decoration: none;
 }
 
+
 .btn-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
+  text-decoration: none;
+  padding: 18px 28px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+}
+
+.btn-text {
+  white-space: nowrap;
+}
+
+.arrow {
+  font-size: 18px;
+  line-height: 1;
 }
 
 .cta-pre-text {
