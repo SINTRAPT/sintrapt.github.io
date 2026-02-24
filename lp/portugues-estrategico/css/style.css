@@ -64,6 +64,21 @@ header {
   opacity: 0.75;
 }
 
+.hero-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.hero-benefits li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.highlight {
+  color: #ffd54f;
+  font-weight: 700;
+}
+
 /* BOTÕES */
 .cta-primary {
   display: inline-block;
