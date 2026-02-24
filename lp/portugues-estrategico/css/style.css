@@ -1,4 +1,4 @@
-/*  V7 */
+/*  V8 */
 /* RESET */
 * {
   margin: 0;
@@ -74,6 +74,14 @@ header {
   margin-bottom: 8px;
   font-size: 16px;
 }
+
+.hero ul {
+  margin-bottom: 22px; /* antes estava grande */
+}
+.hero .bullets {
+  margin-bottom: 20px;
+}
+
 .highlight {
   color: #ffd54f;
   font-weight: 700;
@@ -103,6 +111,20 @@ header {
   color: #fff;
   opacity: 0.85;
   text-decoration: none;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cta-pre-text {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 /* SEÇÕES */
@@ -234,6 +256,11 @@ footer {
 
   .professor-image img {
     max-width: 280px;
+  }
+
+  .cta-pre-text {
+    font-size: 16px;
+    margin-bottom: 12px;
   }
 
 }
