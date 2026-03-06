@@ -150,12 +150,16 @@ a {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: #7c4dff;
   color: #fff;
+  box-shadow: 0 6px 18px rgba(124,77,255,0.35);
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
+  background: #6a3ef0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(124,77,255,0.45);
 }
 
 .btn-secondary {
