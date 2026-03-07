@@ -289,6 +289,30 @@ text-decoration:none;
 margin-right:8px;
 }
 
+/* Mini Prova social */
+.trust-bar{
+background:#ffffff;
+border-top:1px solid #eee;
+border-bottom:1px solid #eee;
+}
+
+.trust-inner{
+display:flex;
+justify-content:center;
+gap:32px;
+padding:18px 0;
+flex-wrap:wrap;
+}
+
+.trust-item{
+font-size:15px;
+color:#374151;
+}
+
+.trust-item strong{
+color:#111827;
+}
+
 /* MOBILE */
 
 @media (max-width:900px){
@@ -356,6 +380,17 @@ text-align:center;
 .btn-large{
 padding:20px;
 font-size:1.15rem;
+}
+
+  .trust-inner{
+flex-direction:column;
+align-items:center;
+gap:10px;
+text-align:center;
+}
+
+.trust-item{
+font-size:14px;
 }
 
 }
