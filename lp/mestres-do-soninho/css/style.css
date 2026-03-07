@@ -1,4 +1,4 @@
-/*#### V1.10 #####*/
+/*#### V1.11 #####*/
 /* =========================
    RESET
 ========================= */
@@ -495,6 +495,19 @@ color:#374151;
   margin: 0 0 18px;
   font-size: 0.92rem;
   color: #4b5563;
+}
+
+.price-note {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+.price-note strong {
+    color: #374151;
+    font-weight: 700;
 }
 
 /* =========================
