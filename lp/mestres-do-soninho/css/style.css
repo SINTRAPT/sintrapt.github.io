@@ -1,4 +1,4 @@
-/*#### V1.13 #####*/
+/*#### V1.14 #####*/
 /* =========================
    RESET
 ========================= */
@@ -509,6 +509,14 @@ color:#374151;
     color: #374151;
     font-weight: 700;
 }
+
+.price-context {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .pre-offer-text {
     max-width: 720px;
     margin: 0 auto 30px auto;
@@ -517,6 +525,7 @@ color:#374151;
     line-height: 1.6;
     color: #555;
 }
+
 /* =========================
    FAQ
 ========================= */
