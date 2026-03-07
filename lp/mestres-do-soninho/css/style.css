@@ -1,4 +1,4 @@
-/*#### V1.88 #####*/
+/*#### V1.9 #####*/
 /* =========================
    RESET
 ========================= */
@@ -253,10 +253,24 @@ p {
   max-width: 420px;
 }
 
+.hero-cta-group{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}
+
 .hero-proof{
-font-size:0.9rem;
-color:#6b7280;
-margin-top:12px;
+  font-size: 0.92rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.hero-proof strong{
+  color: #374151;
+  font-weight: 600;
 }
 
 /* =========================
@@ -645,4 +659,23 @@ color:#374151;
     margin-top: 16px;
     padding-top: 24px;
   }
+   .hero-cta-group{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hero-proof{
+  font-size: 0.92rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.hero-proof strong{
+  color: #374151;
+  font-weight: 600;
+}
 }
