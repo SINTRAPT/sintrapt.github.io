@@ -1,4 +1,4 @@
-/*#### V1.11 #####*/
+/*#### V1.12 #####*/
 /* =========================
    RESET
 ========================= */
@@ -509,7 +509,14 @@ color:#374151;
     color: #374151;
     font-weight: 700;
 }
-
+.pre-offer-text {
+    max-width: 720px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
 /* =========================
    FAQ
 ========================= */
