@@ -73,11 +73,8 @@ a {
 .hero {
   position: relative;
   padding: 72px 0 48px;
-  background: linear-gradient(
-    180deg,
-    #fffdfb 0%,
-    #f8f4ef 100%
-  );
+  background: linear-gradient(180deg, #fffdfb 0%, #f8f4ef 100%);
+  overflow: hidden;
 }
 
 .hero::before {
@@ -89,8 +86,8 @@ a {
   height: 420px;
   background: radial-gradient(
     circle,
-    rgba(124,77,255,0.12) 0%,
-    rgba(124,77,255,0) 70%
+    rgba(124, 77, 255, 0.12) 0%,
+    rgba(124, 77, 255, 0) 70%
   );
   pointer-events: none;
 }
