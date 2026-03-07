@@ -1,4 +1,4 @@
-/*#### V1.7 #####*/
+/*#### V1.88 #####*/
 /* =========================
    RESET
 ========================= */
@@ -97,6 +97,12 @@ main {
   background: var(--bg);
 }
 
+.section + .section,
+.section + .section-alt,
+.section-alt + .section {
+margin-top: 20px;
+}
+
 .section-alt {
   background: var(--bg-soft);
 }
@@ -184,11 +190,13 @@ p {
 }
 
 .hero-media img {
-  width: 100%;
+  width: 90%;
   height: auto;
   object-fit: cover;
   border-radius: 24px;
-  box-shadow: var(--shadow-hero);
+   max-width:520px;
+   margin:auto;
+   box-shadow:0 20px 50px rgba(0,0,0,0.12);   
 }
 
 .tag {
@@ -231,8 +239,24 @@ p {
 
 .hero-actions,
 .center-action {
-  margin-top: 20px;
+  display:flex;
+   justify-content:center;
+   margin-top:28px;
   margin-bottom: 0;
+}
+
+.hero-meta {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 14px 0 18px;
+  line-height: 1.5;
+  max-width: 420px;
+}
+
+.hero-proof{
+font-size:0.9rem;
+color:#6b7280;
+margin-top:12px;
 }
 
 /* =========================
@@ -301,6 +325,25 @@ p {
   color: #111827;
 }
 
+.trust-strip{
+background:#ffffff;
+border-top:1px solid #e7dfd5;
+border-bottom:1px solid #e7dfd5;
+}
+
+.trust-inner{
+display:flex;
+justify-content:center;
+gap:32px;
+flex-wrap:wrap;
+padding:16px 0;
+}
+
+.trust-item{
+font-size:0.95rem;
+color:#374151;
+}
+
 /* =========================
    TEXT / CONTENT SECTIONS
 ========================= */
@@ -329,10 +372,12 @@ p {
 }
 
 .image-card img {
-  width: 100%;
   height: auto;
   border-radius: 24px;
-  box-shadow: var(--shadow-hero);
+   width:85%;
+   max-width:500px;
+   margin:auto;
+   box-shadow:0 20px 50px rgba(0,0,0,0.12);
 }
 
 /* =========================
