@@ -17,7 +17,7 @@ button_type: type,
 button_url: url
 });
 
-if(type === "checkout" || type === "pagina_produtor){
+if(type === "checkout" || type === "pagina_vendas"){
 e.preventDefault();
 
 setTimeout(function(){
