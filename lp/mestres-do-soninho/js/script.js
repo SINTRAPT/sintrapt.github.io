@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("click", function(e){
 
 var el = e.target.closest(".cta_tracking");
@@ -19,4 +18,3 @@ button_url: url
 });
 
 });
-</script>
