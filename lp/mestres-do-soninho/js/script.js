@@ -7,14 +7,17 @@ var eventName = el.dataset.event || "rca_click";
 var location = el.dataset.location || "unknown";
 var product = el.dataset.product || "unknown";
 var type = el.dataset.type || "unknown";
+var version = el.dataset.lp || "unknown";
 var url = el.href || "";
+
 
 dataLayer.push({
 event: eventName,
 button_location: location,
 product_name: product,
 button_type: type,
-button_url: url
+button_url: url,
+lp_version:version
 });
 
 if(type === "checkout" || type === "pagina_vendas"){
