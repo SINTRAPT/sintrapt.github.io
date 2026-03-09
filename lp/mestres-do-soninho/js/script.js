@@ -3,8 +3,6 @@ document.addEventListener("click", function(e){
 var el = e.target.closest(".cta_tracking");
 if(!el) return;
 
-e.preventDefault();
-
 var eventName = el.dataset.event || "rca_click";
 var location = el.dataset.location || "unknown";
 var product = el.dataset.product || "unknown";
@@ -19,8 +17,12 @@ button_type: type,
 button_url: url
 });
 
+if(type === "checkout" || type === "pagina_produtor){
+e.preventDefault();
+
 setTimeout(function(){
 window.open(url, "_blank");
-}, 150);
+},150);
+}
 
 });
