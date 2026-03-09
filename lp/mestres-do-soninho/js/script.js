@@ -3,6 +3,8 @@ document.addEventListener("click", function(e){
 var el = e.target.closest(".cta_tracking");
 if(!el) return;
 
+e.preventDefault();
+
 var eventName = el.dataset.event || "rca_click";
 var location = el.dataset.location || "unknown";
 var product = el.dataset.product || "unknown";
@@ -16,5 +18,9 @@ product_name: product,
 button_type: type,
 button_url: url
 });
+
+setTimeout(function(){
+window.open(url, "_blank");
+}, 150);
 
 });
