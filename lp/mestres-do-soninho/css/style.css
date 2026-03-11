@@ -1,4 +1,4 @@
-/*#### V1.20 #####*/
+/*#### V1.21 #####*/
 /* =========================
    RESET
 ========================= */
@@ -283,6 +283,10 @@ p {
   margin-left:6px;
   font-weight:700;
   animation: arrowPulse 1.6s ease-in-out infinite;
+}
+
+.hero-cta:hover .cta-arrow{
+  transform: translateX(6px);
 }
 
 /* =========================
