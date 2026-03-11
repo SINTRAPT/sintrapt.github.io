@@ -1,4 +1,4 @@
-/*#### V1.16 #####*/
+/*#### V1.17 #####*/
 /* =========================
    RESET
 ========================= */
@@ -276,6 +276,18 @@ p {
 .hero-proof strong{
   color: #374151;
   font-weight: 600;
+}
+
+.cta-arrow{
+display:inline-block;
+margin-left:6px;
+animation: arrowMove 1.5s infinite;
+}
+
+@keyframes arrowMove{
+0%{transform:translateX(0);}
+50%{transform:translateX(4px);}
+100%{transform:translateX(0);}
 }
 
 /* =========================
@@ -712,6 +724,10 @@ display:none;
   color: #6b7280;
   line-height: 1.4;
   margin: 0;
+}
+
+.hero-cta{
+white-space:nowrap;
 }
 
 .hero-proof strong{
