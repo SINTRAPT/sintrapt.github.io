@@ -1,4 +1,4 @@
-/*#### V1.18 #####*/
+/*#### V1.19 #####*/
 /* =========================
    RESET
 ========================= */
@@ -278,8 +278,10 @@ p {
   font-weight: 600;
 }
 
-.hero-cta:hover .cta-arrow{
-transform: translateX(4px);
+.cta-arrow{
+display:inline-block;
+margin-left:6px;
+animation: arrowMove 1.5s infinite;
 }
 
 /* =========================
@@ -733,12 +735,6 @@ margin-left:6px;
 animation: arrowMove 1.5s infinite;
 }
 
-@keyframes arrowMove{
-0%{transform:translateX(0);}
-50%{transform:translateX(4px);}
-100%{transform:translateX(0);}
-}
-
 .mobile-cta{
 position:fixed;
 bottom:0;
@@ -765,4 +761,10 @@ box-shadow:0 10px 30px rgba(124,77,255,0.35);
 body{
 padding-bottom:80px;
 }   
+}
+
+@keyframes arrowMove{
+0%{transform:translateX(0);}
+50%{transform:translateX(4px);}
+100%{transform:translateX(0);}
 }
