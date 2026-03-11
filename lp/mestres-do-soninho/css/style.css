@@ -1,4 +1,4 @@
-/*#### V1.14 #####*/
+/*#### V1.15 #####*/
 /* =========================
    RESET
 ========================= */
@@ -243,6 +243,10 @@ p {
    justify-content:center;
    margin-top:28px;
   margin-bottom: 0;
+}
+
+.hero-cta {
+margin-top: 28px;
 }
 
 .hero-meta {
