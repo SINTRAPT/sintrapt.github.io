@@ -1,4 +1,4 @@
-/*#### V1.19 #####*/
+/*#### V1.20 #####*/
 /* =========================
    RESET
 ========================= */
@@ -279,9 +279,10 @@ p {
 }
 
 .cta-arrow{
-display:inline-block;
-margin-left:6px;
-animation: arrowMove 1.5s infinite;
+  display:inline-block;
+  margin-left:6px;
+  font-weight:700;
+  animation: arrowPulse 1.6s ease-in-out infinite;
 }
 
 /* =========================
@@ -730,9 +731,10 @@ white-space:nowrap;
 }
    
 .cta-arrow{
-display:inline-block;
-margin-left:6px;
-animation: arrowMove 1.5s infinite;
+  display:inline-block;
+  margin-left:6px;
+  font-weight:700;
+  animation: arrowPulse 1.6s ease-in-out infinite;
 }
 
 .mobile-cta{
@@ -763,8 +765,8 @@ padding-bottom:80px;
 }   
 }
 
-@keyframes arrowMove{
-0%{transform:translateX(0);}
-50%{transform:translateX(4px);}
-100%{transform:translateX(0);}
+@keyframes arrowPulse{
+  0%{transform:translateX(0);opacity:1;}
+  50%{transform:translateX(2px);opacity:.9;}
+  100%{transform:translateX(0);opacity:1;}
 }
