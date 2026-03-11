@@ -278,16 +278,8 @@ p {
   font-weight: 600;
 }
 
-.cta-arrow{
-display:inline-block;
-margin-left:6px;
-animation: arrowMove 1.5s infinite;
-}
-
-@keyframes arrowMove{
-0%{transform:translateX(0);}
-50%{transform:translateX(4px);}
-100%{transform:translateX(0);}
+.hero-cta:hover .cta-arrow{
+transform: translateX(4px);
 }
 
 /* =========================
@@ -733,6 +725,18 @@ white-space:nowrap;
 .hero-proof strong{
   color: #374151;
   font-weight: 600;
+}
+   
+.cta-arrow{
+display:inline-block;
+margin-left:6px;
+animation: arrowMove 1.5s infinite;
+}
+
+@keyframes arrowMove{
+0%{transform:translateX(0);}
+50%{transform:translateX(4px);}
+100%{transform:translateX(0);}
 }
 
 .mobile-cta{
