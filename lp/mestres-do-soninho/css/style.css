@@ -710,6 +710,7 @@ display:none;
     margin-top: 16px;
     padding-top: 24px;
   }
+   
    .hero-cta-group{
   display: flex;
  flex-direction: column;
@@ -724,7 +725,16 @@ display:none;
   color: #6b7280;
   line-height: 1.4;
   margin: 0;
+   order:2;
 }
+
+   .hero-content{
+      order:1;
+   }
+
+      .hero-media{
+      order:3;
+   }
 
 .hero-cta{
 white-space:nowrap;
