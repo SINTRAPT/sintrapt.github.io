@@ -632,8 +632,12 @@ display:none;
     grid-template-columns: 1fr;
   }
 
+   .hero-content{
+      order:1;
+   }
+
   .hero-media {
-    order: -1;
+    order: 2;
   }
 
   .card-grid {
@@ -735,10 +739,6 @@ white-space:nowrap;
   font-weight: 600;
 }
 
-.hero-grid{
-   display: flex;
-   flex-direction:column-reverse;
-}
    
 .cta-arrow{
   display:inline-block;
