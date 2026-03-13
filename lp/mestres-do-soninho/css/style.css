@@ -712,8 +712,8 @@ display:none;
   }
    .hero-cta-group{
   display: flex;
- /* flex-direction: column;*/
-   flex-direction:column-reverse;
+ flex-direction: column;
+   /* flex-direction:column-reverse;*/
   align-items: flex-start;
   gap: 12px;
   margin-top: 20px;
