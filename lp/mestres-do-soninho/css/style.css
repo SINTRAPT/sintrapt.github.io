@@ -734,6 +734,11 @@ white-space:nowrap;
   color: #374151;
   font-weight: 600;
 }
+
+.hero-grid{
+   display: flex;
+   flex-direction:column-reverse;
+}
    
 .cta-arrow{
   display:inline-block;
