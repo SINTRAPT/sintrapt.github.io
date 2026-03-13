@@ -1,4 +1,4 @@
-window.product_name = "curso_sono";
+window.product_name = "mestres_soninho";
 window.lp_version = "lp_v1";
 
 document.addEventListener("click", function(e){
