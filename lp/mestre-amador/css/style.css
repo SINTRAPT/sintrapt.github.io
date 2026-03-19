@@ -1,0 +1,155 @@
+/*### V1.0 ###*/
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 26px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.sub {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.alert {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  background: #ff6600;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  margin: 20px 0;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.box {
+  background: #f5f5f5;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.price {
+  background: #fff3cd;
+  padding: 20px;
+  text-align: center;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+.safe {
+  font-size: 12px;
+  text-align: center;
+}
+
+.urgency {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --container: 1120px;
+  --narrow: 720px;
+
+  --bg: #f5f5f5; /*#f7f5f2;*/
+
+  --muted: #6b7280;
+  --heading: 6b7280; /*#1f2937;*/
+
+  --border: #e7dfd5;
+
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  border-bottom: 1px solid #e9e2d9;
+  background: var(--bg);
+  max-width: 600px;
+  margin: auto;
+}
+
+.header-inner {
+  /*padding: 8px 0;*/
+   padding: 18px;
+
+}
+
+.brand {
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: var(--heading);
+    text-decoration: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+    max-width: 600px;
+  margin: auto;
+ padding: 15px;
+ }
+
+.footer-links {
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-decoration: none; 
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  font-size: 0.94rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.footer-copy {
+  font-size: 0.94rem;
+  color: var(--muted);
+  margin-top: 16px;
+}
