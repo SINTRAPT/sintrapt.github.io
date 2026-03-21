@@ -1,4 +1,4 @@
-/*#### V1.6 ###*/
+/*#### V1.7 ###*/
 
 * {
   box-sizing: border-box;
@@ -169,6 +169,15 @@ ul li {
   text-align: center;
   font-weight: bold;
   margin: 20px 0;
+}
+
+.final-call {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  color: #d93025;
+  margin: 22px 0 12px;
+  line-height: 1.4;
 }
 
 .footer {
