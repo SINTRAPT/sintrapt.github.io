@@ -1,4 +1,4 @@
-/*#### V1.7 ###*/
+/*#### V1.10 ###*/
 
 * {
   box-sizing: border-box;
@@ -43,14 +43,16 @@ h1 {
 
 .btn {
   display: block;
-  background: #ff6600;
+  background: linear-gradient(135deg, #ff6a00, #ff8c00);
   color: #fff;
   text-align: center;
   padding: 16px;
-  margin: 20px 0;
+  margin: 25px 0;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
+  box-shadow: 0 10px 25px rgba(255, 106, 0, 0.4);
+  font-size: 18px;
 }
 
 .btn:hover {
@@ -95,6 +97,51 @@ h1 {
   font-weight: bold;
 }
 
+.solution-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.solution-badge {
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 15px;
+	font-weight: 600;
+  padding: 8px 16px;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.solution-title {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.solution-proof {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.solution-description {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.solution-author {
+  font-size: 14px;
+  color: #666;
+}
+
 .price-bridge {
   margin: 0 0 18px;
   font-size: 15px;
@@ -108,19 +155,20 @@ h1 {
   border-radius: 12px;
   padding: 20px 15px;
   margin: 18px auto;
-  max-width: 320px;
+  max-width: 400px;
 }
 
 .offer-label {
   margin: 0 0 6px;
   font-size: 15px;
   color: #444;
+  font-weight: 600;
 }
 
 .offer-price {
   margin: 0;
-  margin-bottom: 6px;
-  font-size: 42px;
+  margin-bottom: 10px;
+  font-size: 45px;
   font-weight: 800;
   color: #0a7d2c;
   line-height: 1;
