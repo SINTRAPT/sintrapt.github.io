@@ -532,6 +532,31 @@ a {
     font-size: 17px;
     line-height: 1.5;
   }
+  
+    .hero {
+    display: flex;
+    flex-direction: column;
+	}
+	
+  .hero-content {
+	width: 100%;
+	}
+
+  .hero-card {
+    width: 100%;
+    margin-top: 24px;
+	padding: 22px;
+  }	
+
+  .hero-card h2 {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 32px;
+  }
+	
+  }
 
   /* ===== CARDS / PASSOS ===== */
   .steps {
@@ -602,6 +627,6 @@ a {
 
   /* Evita que o botão cubra conteúdo */
   body {
-    padding-bottom: 84px;
+    padding-bottom: 100px;
   }
 }

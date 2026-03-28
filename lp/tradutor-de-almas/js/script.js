@@ -29,42 +29,32 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const floatingCta = document.getElementById("floatingCta");
-  const footer = document.querySelector(".footer");
-  const triggerSection = document.querySelector(".proof-section");
+window.addEventListener("scroll", function () {
+  const trigger = document.querySelector(".proof-section");
+  const finalSection = document.querySelector(".final-cta");
+  const button = document.querySelector(".floating-cta");
 
-  function toggleFloatingCta() {
-    if (!floatingCta) return;
+  if (!trigger || !button) return;
 
-    let passedTrigger = false;
-    let nearFooter = false;
+  const triggerTop = trigger.getBoundingClientRect().top;
 
-    if (triggerSection) {
-      const triggerRect = triggerSection.getBoundingClientRect();
-      passedTrigger = triggerRect.bottom < window.innerHeight * 0.35;
-    }
-
-    if (footer) {
-      const footerRect = footer.getBoundingClientRect();
-      nearFooter = footerRect.top < window.innerHeight - 120;
-    }
-
-    const shouldShow = passedTrigger && !nearFooter;
-
-    if (shouldShow) {
-      floatingCta.classList.add("show");
-    } else {
-      floatingCta.classList.remove("show");
-    }
+  if (triggerTop < window.innerHeight - 100) {
+    button.classList.add("show");
+  } else {
+    button.classList.remove("show");
   }
 
-  window.addEventListener("scroll", toggleFloatingCta, { passive: true });
-  window.addEventListener("resize", toggleFloatingCta);
-  toggleFloatingCta();
+  // 👇 ESCONDE no final
+  if (finalSection) {
+    const finalTop = finalSection.getBoundingClientRect().top;
+
+    if (finalTop < window.innerHeight - 100) {
+      button.classList.remove("show");
+    }
+  }
 });
 
-window.product_name = "mestre-amador";
+window.product_name = "Tradutor-Almas";
 window.lp_version = "v1";
 
 document.addEventListener("click", function(e){
