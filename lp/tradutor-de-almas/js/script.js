@@ -29,29 +29,66 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-window.addEventListener("scroll", function () {
-  const trigger = document.querySelector(".proof-section");
-  const finalSection = document.querySelector(".final-cta");
-  const button = document.querySelector(".floating-cta");
+document.addEventListener("DOMContentLoaded", function () {
+const floatingCta = document.getElementById("floatingCta");
+const triggerSection = document.querySelector(".proof-section");
+const finalSection = document.querySelector(".final-section");
+const primaryCtas = document.querySelectorAll(".primary-cta");
 
-  if (!trigger || !button) return;
+function isElementVisible(el) {
+  if (!el) return false;
 
-  const triggerTop = trigger.getBoundingClientRect().top;
+  const rect = el.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
 
-  if (triggerTop < window.innerHeight - 100) {
-    button.classList.add("show");
-  } else {
-    button.classList.remove("show");
+  const verticallyVisible = rect.top < windowHeight && rect.bottom > 0;
+  const horizontallyVisible = rect.left < windowWidth && rect.right > 0;
+
+  return verticallyVisible && horizontallyVisible;
+}
+
+function anyPrimaryCtaVisible() {
+  for (const cta of primaryCtas) {
+	if (isElementVisible(cta)) {
+	  return true;
+	}
+  }
+  return false;
+}
+
+function toggleFloatingCta() {
+  if (!floatingCta) return;
+
+  let show = false;
+
+  if (triggerSection) {
+	const triggerRect = triggerSection.getBoundingClientRect();
+	show = triggerRect.top < window.innerHeight - 120;
   }
 
-  // 👇 ESCONDE no final
   if (finalSection) {
-    const finalTop = finalSection.getBoundingClientRect().top;
-
-    if (finalTop < window.innerHeight - 100) {
-      button.classList.remove("show");
-    }
+	const finalRect = finalSection.getBoundingClientRect();
+	if (finalRect.top < window.innerHeight - 120) {
+	  show = false;
+	}
   }
+
+  // Esconde se já existir outro CTA principal visível na tela
+  if (anyPrimaryCtaVisible()) {
+	show = false;
+  }
+
+  if (show) {
+	floatingCta.classList.add("show");
+  } else {
+	floatingCta.classList.remove("show");
+  }
+}
+
+window.addEventListener("scroll", toggleFloatingCta, { passive: true });
+window.addEventListener("resize", toggleFloatingCta);
+toggleFloatingCta();
 });
 
 window.product_name = "Tradutor-Almas";
