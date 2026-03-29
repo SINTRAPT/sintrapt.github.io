@@ -3,105 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imersão Tradutor de Almas | Mobile First</title>
+  <title>Imersão Tradutor de Almas</title>
   <meta
     name="description"
     content="Entenda o que está travando sua vida emocional e conheça a Imersão Tradutor de Almas."
   />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style.css?v1" />
+	<!-- Google Tag Manager -->
+  <script>
+	 (function (w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+		var f = d.getElementsByTagName(s)[0],
+		   j = d.createElement(s),
+		   dl = l != "dataLayer" ? "&l=" + l : "";
+		j.async = true;
+		j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+		f.parentNode.insertBefore(j, f);
+	 })(window, document, "script", "dataLayer", "GTM-58SL48N3");
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
-
+	<!-- Google Tag Manager (noscript) -->
+      <noscript>
+         <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-58SL48N3"
+            height="0"
+            width="0"
+            style="display: none; visibility: hidden"
+         ></iframe>
+      </noscript>
+      <!-- End Google Tag Manager (noscript) -->
+	  
   <!-- HERO -->
-  <section class="hero">
+  <section id="hero" class="hero" data-section="S1-HERO">
     <div class="container">
-      <div class="hero-tag">IMERSÃO ONLINE + EBOOK</div>
+      <div class="hero-kicker-wrap">
+        <span class="hero-kicker">IMERSÃO ONLINE + EBOOK</span>
+      </div>
 
       <h1 class="hero-title">
-        Você não está travado por falta de esforço
+        Se você já tentou mudar…<br>
+        e sempre volta pro mesmo lugar,<br>
+        isso explica tudo
       </h1>
 
       <p class="hero-subtitle">
-        Não é preguiça. É um padrão emocional que você ainda não enxergou.
+        Não é falta de esforço.<br>
+        É um padrão emocional que você ainda não enxergou.
       </p>
 
-      <a
-        href="SEU_LINK_DE_AFILIADO_AQUI"
-        class="btn btn-primary btn-hero primary-cta"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GARANTIR MINHA VAGA AGORA
+      <a 
+	  href="#problema" 
+	  class="btn btn-ghost btn-ghost-light hero-scroll-cta cta_tracking"
+		data-event="rca_click"
+		data-location="cta_hero"
+		data-type="scroll"
+	  >
+        Quero entender o que está me travando
       </a>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">📅<strong> 11 e 12 de Abril</strong></div>
+        <div class="hero-meta-item">⏰<strong> Das 9h às 17h</strong></div>
+        <div class="hero-meta-item">💻<strong> 100% Online</strong></div>
+      </div>
     </div>
   </section>
 
-  <!-- IDENTIFICAÇÃO -->
-  <section class="section section-light">
+  <!-- PROBLEMA -->
+  <section id="problema" class="section section-light" data-section="S2-PROBLEMA">
     <div class="container">
       <div class="section-kicker">VOCÊ SE IDENTIFICA?</div>
 
       <h2 class="section-title">
-        Se você sente isso, não é coincidência
+        Se isso acontece com você…
       </h2>
 
-      <div class="check-list">
-        <div class="check-item">Pensa demais e não consegue agir</div>
-        <div class="check-item">Vive ciclos repetitivos</div>
-        <div class="check-item">Se sabota mesmo sabendo o que fazer</div>
-        <div class="check-item">Sente que algo trava você</div>
+      <div class="stack-list">
+        <div class="stack-card">Você tenta mudar… mas volta pro mesmo lugar</div>
+        <div class="stack-card">Sabe o que fazer, mas não consegue agir</div>
+        <div class="stack-card">Se sabota mesmo consciente</div>
+        <div class="stack-card">Sente que algo te trava — mas não sabe o quê</div>
       </div>
 
-      <a
-        href="SEU_LINK_DE_AFILIADO_AQUI"
-        class="btn btn-secondary"
-        target="_blank"
-        rel="noopener noreferrer"
-		id="CTA_PRODUTO"
-      >
-        QUERO ENTENDER ISSO
+      <a 
+		  href="#quebra" 
+		  class="btn btn-secondary cta_tracking"
+		  data-event="rca_click"
+		  data-location="cta_quebra"
+		  data-type="scroll"
+	  >
+        Isso descreve exatamente o que eu sinto
       </a>
     </div>
   </section>
 
-  <!-- QUEBRA DE CRENÇA -->
-  <section class="section section-dark">
+  <!-- QUEBRA -->
+  <section id="quebra" class="section section-dark" data-section="S3-QUEBRA">
     <div class="container">
       <div class="section-kicker section-kicker-light">QUEBRA DE CRENÇA</div>
 
       <h2 class="section-title section-title-light">
-        O problema não é falta de força de vontade
+        Você não está falhando
       </h2>
 
       <p class="section-text section-text-light">
-        Você está tentando resolver na superfície algo que nasce no inconsciente.
+        Você está tentando resolver do jeito errado.
       </p>
+
+      <p class="section-text section-text-light">
+        O problema não está no que você faz…<br>
+        mas no que você ainda não vê.
+      </p>
+
+      <a 
+		  href="#solucao" 
+		  class="btn btn-ghost btn-ghost-light cta_tracking"
+		data-event="rca_click"
+		data-location="cta_quebra"
+		data-type="scroll"
+	  >
+        Quero entender isso
+      </a>
     </div>
   </section>
 
-  <!-- MECANISMO -->
-  <section class="section section-light">
+  <!-- SOLUÇÃO -->
+  <section id="solucao" class="section section-light" data-section="S4-SOLUCAO">
     <div class="container">
       <div class="section-kicker">O QUE VOCÊ PODE ACESSAR</div>
 
       <h2 class="section-title">
-        Existe um processo que revela o que está por trás dos seus bloqueios
+        Existe um método que revela exatamente o que está travando sua vida
       </h2>
 
       <p class="section-text">
-        Em apenas 2 dias, você vai:
+        Em apenas 2 dias você vai:
       </p>
 
-      <div class="benefit-list">
-        <div class="benefit-item">Identificar padrões ocultos</div>
-        <div class="benefit-item">Entender suas reações</div>
-        <div class="benefit-item">Ter clareza emocional</div>
+      <div class="stack-list">
+        <div class="stack-card">Identificar padrões ocultos</div>
+        <div class="stack-card">Entender suas reações</div>
+        <div class="stack-card">Ter clareza emocional</div>
       </div>
+
+      <a
+        href="https://go.hotmart.com/P105100216B"
+        class="btn btn-primary primary-cta hide-floating-trigger cta_tracking"
+        target="_blank"
+        rel="noopener noreferrer"
+		data-event="rca_solucao"
+		data-location="cta_final"
+		data-type="pagina_vendas"
+      >
+        Quero participar da imersão
+      </a>
+    </div>
+  </section>
+
+  <!-- PROVA -->
+  <section id="prova" class="section section-light proof-section" data-section="S5-PROVA">
+    <div class="container">
+      <h2 class="section-title">
+        Mais de 20.000 pessoas já passaram por isso
+      </h2>
+
+      <p class="section-text">
+        Pessoas que estavam presas em ansiedade, ciclos repetitivos e decisões erradas
+        hoje têm mais clareza e direção.
+      </p>
+
+      <div class="proof-line">
+        ⭐ Experiência prática • ⭐ Conteúdo profundo • ⭐ Aplicação real
+      </div>
+
+      <a
+        href="https://go.hotmart.com/P105100216B"
+        class="btn btn-primary primary-cta cta_tracking"
+        target="_blank"
+        rel="noopener noreferrer"
+		data-event="rca_click"
+		data-location="cta_prova"
+		data-type="pagina_vendas"
+      >
+        Quero ter esse resultado
+      </a>
     </div>
   </section>
 
   <!-- OFERTA -->
-  <section class="section section-offer">
+  <section id="oferta" class="section section-dark section-offer" data-section="S6-OFERTA">
     <div class="container">
       <div class="offer-card">
         <div class="offer-badge">1º LOTE ATIVO</div>
@@ -114,168 +207,93 @@
           <li>Materiais complementares</li>
         </ul>
 
+        <div class="offer-info">
+          <div>📅 <strong>11 e 12 de Abril</strong></div>
+          <div>⏰ <strong>Das 9h às 17h</strong></div>
+          <div>💻 <strong>100% Online</strong></div>
+        </div>
+
         <div class="price-wrap">
           <span class="price-label">Lote atual</span>
           <div class="price">R$ 37,00</div>
           <div class="installments">5x de R$ 8,19</div>
         </div>
 
-        <p class="offer-alert">
-          ⚠️ Lote promocional por tempo limitado
-        </p>
+        <p class="offer-alert">⚠️ Lote promocional por tempo limitado</p>
 
         <a
-          href="SEU_LINK_DE_AFILIADO_AQUI"
-          class="btn btn-primary btn-full primary-cta"
-          target="_blank"
-          rel="noopener noreferrer"
-		  id="CTA_PRODUTO"
+		  href="https://go.hotmart.com/P105100216B"
+		  class="btn btn-primary btn-full primary-cta hide-floating-trigger cta_tracking"
+		target="_blank"
+		rel="noopener noreferrer"
+		data-event="rca_click"
+		data-location="cta_oferta"
+		data-type="pagina_vendas"
         >
-          GARANTIR MINHA VAGA AGORA
+          Garantir minha vaga agora
         </a>
       </div>
     </div>
   </section>
 
-  <!-- PROVA -->
-  <section class="section section-light proof-section">
-    <div class="container">
-      <h2 class="section-title">
-        Mais de 20.000 pessoas já passaram por isso
-      </h2>
-
-      <p class="section-text">
-        Pessoas que estavam presas em ansiedade, padrões repetitivos e confusão emocional
-        relatam mais clareza e direção após a experiência.
-      </p>
-
-      <div class="proof-line">
-        ⭐ Experiência prática • ⭐ Conteúdo profundo • ⭐ Aplicação real
-      </div>
-    </div>
-  </section>
-
-  <!-- BENEFÍCIOS EMOCIONAIS -->
-  <section class="section section-light-soft">
-    <div class="container">
-      <div class="section-kicker">O QUE MUDA DEPOIS</div>
-
-      <h2 class="section-title">
-        Depois da imersão, você terá
-      </h2>
-
-      <div class="card-list">
-        <div class="info-card">Clareza sobre suas emoções</div>
-        <div class="info-card">Mais controle sobre suas decisões</div>
-        <div class="info-card">Menos ansiedade mental</div>
-        <div class="info-card">Direção prática para a vida</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMO FUNCIONA -->
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-kicker">COMO FUNCIONA</div>
-
-      <h2 class="section-title">
-        3 passos simples para participar
-      </h2>
-
-      <div class="steps">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3>Faça sua inscrição</h3>
-          <p>Garanta sua vaga com segurança na página oficial.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Receba o acesso</h3>
-          <p>As instruções chegam conforme a plataforma oficial.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Participe ao vivo</h3>
-          <p>Entre na experiência e aprofunde sua jornada emocional.</p>
-        </div>
-      </div>
-
-      <div class="event-box">
-        <div>📅 <strong>Data:</strong> 11 e 12 de Abril</div>
-        <div>⏰ <strong>Horário:</strong> Das 9h às 17h</div>
-        <div>💻 <strong>Formato:</strong> 100% Online</div>
-      </div>
-
-      <a
-        href="SEU_LINK_DE_AFILIADO_AQUI"
-        class="btn btn-primary btn-full primary-cta"
-        target="_blank"
-        rel="noopener noreferrer"
-		id="CTA_PRODUTO"
-      >
-        GARANTIR MINHA VAGA AGORA
-      </a>
-    </div>
-  </section>
-
-  <!-- URGÊNCIA -->
-  <section class="section section-urgency">
-    <div class="container">
-      <div class="urgency-box">
-        <strong>⚠️ Lote promocional por tempo limitado</strong>
-        <p>O próximo lote terá aumento de valor.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FECHAMENTO -->
-  <section class="section section-dark final-section">
+  <!-- FINAL -->
+  <section class="section section-dark final-section" data-section="S7-FINAL">
     <div class="container">
       <div class="section-kicker section-kicker-light">DECISÃO FINAL</div>
 
       <h2 class="section-title section-title-light">
-        Sua vida não muda enquanto você repete os mesmos padrões
+        Se nada mudar,<br>
+        daqui a 1 ano você estará no mesmo lugar
       </h2>
 
       <p class="section-text section-text-light">
-        Você pode continuar como está ou entender o que realmente te trava.
+        A única diferença é que terá perdido mais tempo.
       </p>
 
+      <div class="final-event-info">
+        <div>📅<strong> 11 e 12 de Abril</strong></div>
+        <div>⏰<strong> Das 9h às 17h</strong></div>
+        <div>💻<strong> 100% Online</strong></div>
+      </div>
+
       <a
-        href="SEU_LINK_DE_AFILIADO_AQUI"
-        class="btn btn-primary btn-full primary-cta"
+        href="https://go.hotmart.com/P105100216B"
+        class="btn btn-primary btn-full primary-cta hide-floating-trigger cta_tracking"
         target="_blank"
         rel="noopener noreferrer"
+		data-event="rca_click"
+		data-location="cta_final"
+		data-type="pagina_vendas"
       >
-        GARANTIR MINHA VAGA AGORA
+        Sim, eu quero mudar isso agora
       </a>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER / DISCLAIMER -->
   <footer class="footer">
     <div class="container">
       <p>
         Este site é uma página independente de divulgação. As informações finais,
-        pagamento, entrega, suporte e condições comerciais são de responsabilidade
-        da página oficial do produto.
+        pagamento, entrega, suporte, disponibilidade, lote, condições comerciais e
+        acesso são de responsabilidade da página oficial do produto.
       </p>
     </div>
   </footer>
 
   <!-- FLOATING CTA -->
-  <div class="floating-cta" id="floatingCta">
-    <a
-      href="SEU_LINK_DE_AFILIADO_AQUI"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="floating-cta-button"
-    >
-      Garanta sua vaga agora
-    </a>
-  </div>
+  <div id="floatingCta" class="floating-cta">
+  <a 
+	  href="#oferta" 
+	  id="floatingCtaText" 
+	  class="floating-cta-button cta_tracking"
+	  data-event="rca_click"
+	  data-location="cta_flutuante"
+	  data-type="scroll"
+  >
+  Quero entender o que está me travando
+  </a>
+</div>
 
   <script src="./js/script.js"></script>
 </body>

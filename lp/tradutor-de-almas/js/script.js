@@ -29,67 +29,76 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
-const floatingCta = document.getElementById("floatingCta");
-const triggerSection = document.querySelector(".proof-section");
-const finalSection = document.querySelector(".final-section");
-const primaryCtas = document.querySelectorAll(".primary-cta");
+  const floatingCta = document.getElementById("floatingCta");
+  const floatingText = document.getElementById("floatingCtaText");
 
-function isElementVisible(el) {
-  if (!el) return false;
+  const solucao = document.querySelector("#solucao");
+  const prova = document.querySelector("#prova");
+  const oferta = document.querySelector("#oferta");
+  const finalSection = document.querySelector(".final-section");
 
-  const rect = el.getBoundingClientRect();
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  const blockingCtas = document.querySelectorAll(".hide-floating-trigger");
 
-  const verticallyVisible = rect.top < windowHeight && rect.bottom > 0;
-  const horizontallyVisible = rect.left < windowWidth && rect.right > 0;
-
-  return verticallyVisible && horizontallyVisible;
-}
-
-function anyPrimaryCtaVisible() {
-  for (const cta of primaryCtas) {
-	if (isElementVisible(cta)) {
-	  return true;
-	}
-  }
-  return false;
-}
-
-function toggleFloatingCta() {
-  if (!floatingCta) return;
-
-  let show = false;
-
-  if (triggerSection) {
-	const triggerRect = triggerSection.getBoundingClientRect();
-	show = triggerRect.top < window.innerHeight - 120;
+  function isVisible(el) {
+    if (!el) return false;
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
   }
 
-  if (finalSection) {
-	const finalRect = finalSection.getBoundingClientRect();
-	if (finalRect.top < window.innerHeight - 120) {
-	  show = false;
-	}
+  function anyBlockingVisible() {
+    return Array.from(blockingCtas).some(el => isVisible(el));
   }
 
-  // Esconde se já existir outro CTA principal visível na tela
-  if (anyPrimaryCtaVisible()) {
-	show = false;
+  function updateFloatingCTA() {
+    if (!floatingCta) return;
+
+    let show = false;
+
+    // CONTROLE DE EXIBIÇÃO
+    if (solucao) {
+      const rect = solucao.getBoundingClientRect();
+      show = rect.top < window.innerHeight;
+    }
+
+    if (finalSection && isVisible(finalSection)) {
+      show = false;
+    }
+
+    if (anyBlockingVisible()) {
+      show = false;
+    }
+
+    // TROCA DE COPY DINÂMICA
+    if (oferta && isVisible(oferta)) {
+      floatingText.innerText = "Garantir minha vaga agora";
+	  floatingText.href = "#oferta";
+	  floatingText.dataset.location="cta_flutuante_oferta";
+    } else if (prova && isVisible(prova)) {
+      floatingText.innerText = "Quero ter esse resultado";
+	  floatingText.href = "#oferta";
+	  floatingText.dataset.location="prova";
+    } else if (solucao && isVisible(solucao)) {
+      floatingText.innerText = "Quero entender o que está me travando";
+	  floatingText.href = "#oferta";
+	  floatingText.dataset.location="cta_flutuante_solucao";
+    }
+
+    // EXIBIÇÃO
+    if (show) {
+      floatingCta.classList.add("show");
+    } else {
+      floatingCta.classList.remove("show");
+    }
   }
 
-  if (show) {
-	floatingCta.classList.add("show");
-  } else {
-	floatingCta.classList.remove("show");
-  }
-}
+  window.addEventListener("scroll", updateFloatingCTA, { passive: true });
+  window.addEventListener("resize", updateFloatingCTA);
 
-window.addEventListener("scroll", toggleFloatingCta, { passive: true });
-window.addEventListener("resize", toggleFloatingCta);
-toggleFloatingCta();
+  updateFloatingCTA();
 });
+
 
 window.product_name = "Tradutor-Almas";
 window.lp_version = "v1";
