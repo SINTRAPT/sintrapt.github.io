@@ -1,5 +1,5 @@
 window.product_name = "mestre-amador";
-window.lp_version = "v1";
+window.lp_version = "v2";
 
 document.addEventListener("click", function(e) {
 
