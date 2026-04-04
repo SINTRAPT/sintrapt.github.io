@@ -68,6 +68,7 @@ a {
 
 .topbar-mobile {
   display: none;
+	font-size: 12px;
 }
 
 .section-dark {
