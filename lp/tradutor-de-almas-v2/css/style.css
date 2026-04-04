@@ -68,7 +68,7 @@ a {
 
 .topbar-mobile {
   display: none;
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .section-dark {
@@ -201,10 +201,12 @@ a {
 }
 
 .section-kicker {
+	
   font-size: 13px;
   font-weight: 900;
   letter-spacing: 2px;
-  color: var(--gold);
+  /*color: var(--gold);bg-card*/
+  color: rgba(255,255,255);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
