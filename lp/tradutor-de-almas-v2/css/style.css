@@ -66,6 +66,10 @@ a {
   margin: 0 6px;
 }
 
+.topbar-mobile {
+  display: none;
+}
+
 .section-dark {
   background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-2) 100%);
   color: var(--text-light);
@@ -575,7 +579,7 @@ a {
   .section-title {
     font-size: 52px;
   }
-
+  
   .cards-grid,
   .benefits-grid,
   .dual-boxes,
@@ -609,6 +613,16 @@ a {
 
   .floating-cta {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar-desktop {
+    display: none;
+  }
+
+  .topbar-mobile {
+    display: block;
   }
 }
 
