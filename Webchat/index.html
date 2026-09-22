@@ -3,8 +3,8 @@
 
 <head>
     <!-- If the co-browsing function is required, introduce the cobrowse.js and cobrowseCommon.js components. Replace ip:port with the IP address and port number of the CEC, or directly with the domain name of the CEC. -->
-    <script type="text/javascript" src="https://brazilsaas-poc.aicccloud.com/service-cloud/resource.root/cobrowse/sdk/cobrowse.js"></script>
-    <script type="text/javascript" src="https://brazilsaas-poc.aicccloud.com/service-cloud/webclient/chat_client/js/cobrowseCommon.js"></script>
+    <script type="text/javascript" src="https://aicc.unifique.com.br/service-cloud/resource.root/cobrowse/sdk/cobrowse.js"></script>
+    <script type="text/javascript" src="https://aicc.unifique.com.br/service-cloud/webclient/chat_client/js/cobrowseCommon.js"></script>
     <!-- 0. Introduce the jQuery component. -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
@@ -14,10 +14,10 @@
 	// 1. Define variables, which will be used on the chat box page. For details about the parameters, see Table 1.
         const userId = "202608141457"; 				// user ID (value of thirdUserId in the table)
         const userName = "AXW1479999";				// user nickname (value of thirdUserName in the table)
-        const tenantSpaceId ="202602258504";				// tenant space ID (tenant id)
-        const configId = "202602258504958590";			// channel ID (wWEBchannelConfig id).
+        const tenantSpaceId ="202609047493";				// tenant space ID (tenant id)
+        const configId = "202609047493084770";			// channel ID (wWEBchannelConfig id).
         const locale = "en"; 							// language (locale, which can be zh or en)
-        const $ContextPath = "https://brazilsaas-poc.aicccloud.com/service-cloud";        // request URL
+        const $ContextPath = "https://aicc.unifique.com.br/service-cloud";        // request URL
 		
 	// 2. Construct request parameters.
         let serviceUrl = $ContextPath + "/webclient/chat_client/js/newThirdPartyClient.js?&t="+new Date().getTime();
@@ -31,8 +31,8 @@
 //		thirdUserData['timestamp'] = new Date().getTime();                                   // timestamp
 //		thirdUserData['secretKey'] = 'k9Xm2P8vL1qR5wT7zN4bC0jY6uI3oE8aK1sD5fG2hJ9';   // authentication key
 	// AWX1749999 Adjust
-		thirdUserData['timestamp'] ="2026-09-22T12:39:35.681Z"
-		thirdUserData['thirdPartAuthorization'] ="auth-v2/202602258504958590/2026-09-22T12:39:35.681Z/content-length;content-type/b2d41533c14d1c6e624ccecb0de40a7591324ce2706477fb04e7268ad94d55b8"
+		thirdUserData['timestamp'] ="2026-09-22T17:22:45.478Z"
+		thirdUserData['thirdPartAuthorization'] ="auth-v2/202609047493084770/2026-09-22T17:22:45.478Z/content-length;content-type/d1ad657fd483c45fae1386a19a99e726ffacbeeeca2a5dc4ea16e2b8994bc19a"
 		
 		console.log("URL:",serviceUrl);
 		console.log("thirdUserData:",JSON.stringify(thirdUserData));
