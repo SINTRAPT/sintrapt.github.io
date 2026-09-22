@@ -2,58 +2,55 @@
 <html>
 
 <head>
-    <!-- If the co-browsing function is required, introduce the cobrowse.js and cobrowseCommon.js components. Replace ip:port with the IP address and port number of the CEC, or directly with the domain name of the CEC. -->
+    <!-- Se a função de co-navegação for necessária -->
     <script type="text/javascript" src="https://aicc.unifique.com.br/service-cloud/resource.root/cobrowse/sdk/cobrowse.js"></script>
     <script type="text/javascript" src="https://aicc.unifique.com.br/service-cloud/webclient/chat_client/js/cobrowseCommon.js"></script>
-    <!-- 0. Introduce the jQuery component. -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js?v=1.1"></script>
 </head>
 
 <body>
+    <!-- Container pré-alocado para evitar que o script falhe ao procurar elementos no DOM -->
+    <div id="chat-widget-container"></div>
+
     <script>
-	// 1. Define variables, which will be used on the chat box page. For details about the parameters, see Table 1.
-        const userId = "202608141457"; 				// user ID (value of thirdUserId in the table)
-        const userName = "AXW1479999";				// user nickname (value of thirdUserName in the table)
-        const tenantSpaceId ="202609047493";				// tenant space ID (tenant id)
-        const configId = "202609047493084770";			// channel ID (wWEBchannelConfig id).
-        const locale = "en"; 							// language (locale, which can be zh or en)
-        const $ContextPath = "https://aicc.unifique.com.br/service-cloud";        // request URL
+        const userId = "202608141457"; 
+        const userName = "AXW1479999";
+        const tenantSpaceId = "202609047493";
+        const configId = "202609047493084770";
+        const locale = "en"; 
+        const $ContextPath = "https://aicc.unifique.com.br/service-cloud";
 		
-	// 2. Construct request parameters.
-        let serviceUrl = $ContextPath + "/webclient/chat_client/js/newThirdPartyClient.js?&t="+new Date().getTime();
-		//let serviceUrl = $ContextPath + "/webclient/chat_client/js/newThirdPartyClient.js?&t="+new Date().getTime();
+        let serviceUrl = $ContextPath + "/webclient/chat_client/js/newThirdPartyClient.js?&t=" + new Date().getTime();
         let thirdUserData = {};
         thirdUserData['thirdUserName'] = userName;				
         thirdUserData['thirdUserId'] = userId;					
         thirdUserData['tenantSpaceId'] = tenantSpaceId;			
         thirdUserData['channelConfigId'] = configId;	
         thirdUserData['locale'] = locale;                                       
-//		thirdUserData['timestamp'] = new Date().getTime();                                   // timestamp
-//		thirdUserData['secretKey'] = 'k9Xm2P8vL1qR5wT7zN4bC0jY6uI3oE8aK1sD5fG2hJ9';   // authentication key
-	// AWX1749999 Adjust
-		thirdUserData['timestamp'] ="2026-09-22T17:22:45.478Z"
-		thirdUserData['thirdPartAuthorization'] ="auth-v2/202609047493084770/2026-09-22T17:22:45.478Z/content-length;content-type/d1ad657fd483c45fae1386a19a99e726ffacbeeeca2a5dc4ea16e2b8994bc19a"
+        thirdUserData['timestamp'] = "2026-09-22T17:22:45.478Z";
+        thirdUserData['thirdPartAuthorization'] = "auth-v2/202609047493084770/2026-09-22T17:22:45.478Z/content-length;content-type/d1ad657fd483c45fae1386a19a99e726ffacbeeeca2a5dc4ea16e2b8994bc19a";
 		
-		console.log("URL:",serviceUrl);
-		console.log("thirdUserData:",JSON.stringify(thirdUserData));
-        //getAuthorization(thirdUserData);                                                    // authorization signature
-		
-        // 3. Request newThirdPartyClient.js.
-        var request = $.ajax({
-            url: serviceUrl,
-            method: "POST",
-            data: JSON.stringify(thirdUserData),
-            xhrFields: { withCredentials: true },
-            success: function (data) {
-				// 4. Create a script tag and run the newThirdPartyClient.js script.
-				importScript(data);
-            },
-            error: function (XMLHttpRequest, textStatus) {
-                alert("unauthorized,validate failed")
-            }
+        console.log("URL:", serviceUrl);
+        console.log("thirdUserData:", JSON.stringify(thirdUserData));
+
+        // Executa a requisição AJAX apenas após o DOM estar completamente carregado
+        $(document).ready(function () {
+            $.ajax({
+                url: serviceUrl,
+                method: "POST",
+                data: JSON.stringify(thirdUserData),
+                xhrFields: { withCredentials: true },
+                success: function (data) {
+                    importScript(data);
+                },
+                error: function (XMLHttpRequest, textStatus) {
+                    alert("unauthorized, validate failed");
+                }
+            });
         });
 
-	// 5. Load and run the JavaScript on the integration page.
+        // Função segura para injetar e executar o script retornado
         var importScript = (function (oHead) {
             function loadError(oError) {
                 throw new URIError("The script " + oError.target.src + " is not accessible.");
@@ -63,24 +60,12 @@
                 oScript.type = "text/javascript";
                 oScript.onerror = loadError;
                 if (fOnload) { oScript.onload = fOnload; }
+                
+                // Adiciona o script de forma segura ao final do corpo ou no head
                 oHead.appendChild(oScript);
                 oScript.innerHTML = sSrc;
-            }
-
+            };
         })(document.head || document.getElementsByTagName("body")[0]);
-		
-	// Obtain the authorization signature based on parameters.
-	function getAuthorization(thirdUserData){
-		$.ajax({
-			url:"/webchat/authorizationService",
-			method:"post",
-			data:JSON.stringify(thirdUserData),
-			async:false,
-			success: function (data) {
-				thirdUserData['thirdPartAuthorization'] = data;
-				}
-			});
-		}
     </script>
 </body>
 
