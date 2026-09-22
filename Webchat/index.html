@@ -6,11 +6,13 @@
     <script type="text/javascript" src="https://aicc.unifique.com.br/service-cloud/resource.root/cobrowse/sdk/cobrowse.js"></script>
     <script type="text/javascript" src="https://aicc.unifique.com.br/service-cloud/webclient/chat_client/js/cobrowseCommon.js"></script>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js?v=1.1"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js?v=1.1?v=1.2"></script>
 </head>
 
 <body>
     <!-- Container pré-alocado para evitar que o script falhe ao procurar elementos no DOM -->
+	<!-- Container estrutural exigido pelo cliente de chat da Huawei/AICC -->
+    <div id="newThirdPartyClientDiv" style="position: fixed; bottom: 0; right: 0; z-index: 999999;"></div>
     <div id="chat-widget-container"></div>
 
     <script>
@@ -51,7 +53,7 @@
         });
 
         // Função segura para injetar e executar o script retornado
-        var importScript = (function (oHead) {
+ /*       var importScript = (function (oHead) {
             function loadError(oError) {
                 throw new URIError("The script " + oError.target.src + " is not accessible.");
             }
@@ -66,6 +68,21 @@
                 oScript.innerHTML = sSrc;
             };
         })(document.head || document.getElementsByTagName("body")[0]);
+*/
+		var importScript = function (sSrc) {
+			var blob = new Blob([sSrc], { type: 'text/javascript;charset=utf-8' });
+			var url = URL.createObjectURL(blob);
+			var oScript = document.createElement("script");
+			oScript.type = "text/javascript";
+			oScript.src = url;
+			oScript.onload = function() {
+				URL.revokeObjectURL(url);
+			};
+			oScript.onerror = function(oError) {
+				throw new URIError("Erro ao carregar o script do chat.");
+			};
+			document.body.appendChild(oScript);
+		};
     </script>
 </body>
 
