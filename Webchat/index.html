@@ -6,7 +6,7 @@
     <script type="text/javascript" src="https://brazilsaas-poc.aicccloud.com/service-cloud/resource.root/cobrowse/sdk/cobrowse.js"></script>
     <script type="text/javascript" src="https://brazilsaas-poc.aicccloud.com/service-cloud/webclient/chat_client/js/cobrowseCommon.js"></script>
     <!-- 0. Introduce the jQuery component. -->
-    <script type="text/javascript" src="jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -21,15 +21,22 @@
 		
 	// 2. Construct request parameters.
         let serviceUrl = $ContextPath + "/webclient/chat_client/js/newThirdPartyClient.js?&t="+new Date().getTime();
+		//let serviceUrl = $ContextPath + "/webclient/chat_client/js/newThirdPartyClient.js?&t="+new Date().getTime();
         let thirdUserData = {};
         thirdUserData['thirdUserName'] = userName;				
         thirdUserData['thirdUserId'] = userId;					
         thirdUserData['tenantSpaceId'] = tenantSpaceId;			
         thirdUserData['channelConfigId'] = configId;	
         thirdUserData['locale'] = locale;                                       
-	thirdUserData['timestamp'] = new Date().getTime();                                   // timestamp
-	thirdUserData['secretKey'] = 'k9Xm2P8vL1qR5wT7zN4bC0jY6uI3oE8aK1sD5fG2hJ9';          // authentication key
-        getAuthorization(thirdUserData);                                                    // authorization signature
+//		thirdUserData['timestamp'] = new Date().getTime();                                   // timestamp
+//		thirdUserData['secretKey'] = 'k9Xm2P8vL1qR5wT7zN4bC0jY6uI3oE8aK1sD5fG2hJ9';   // authentication key
+	// AWX1749999 Adjust
+		thirdUserData['timestamp'] ="2026-09-22T12:39:35.681Z"
+		thirdUserData['thirdPartAuthorization'] ="auth-v2/202602258504958590/2026-09-22T12:39:35.681Z/content-length;content-type/b2d41533c14d1c6e624ccecb0de40a7591324ce2706477fb04e7268ad94d55b8"
+		
+		console.log("URL:",serviceUrl);
+		console.log("thirdUserData:",JSON.stringify(thirdUserData));
+        //getAuthorization(thirdUserData);                                                    // authorization signature
 		
         // 3. Request newThirdPartyClient.js.
         var request = $.ajax({
@@ -61,6 +68,7 @@
             }
 
         })(document.head || document.getElementsByTagName("body")[0]);
+		
 	// Obtain the authorization signature based on parameters.
 	function getAuthorization(thirdUserData){
 		$.ajax({
